@@ -22,20 +22,12 @@ class equation_type1:
 
 
     def __eq__(self, other):
-        if other.a==0 and self.a==0:
-            pass
-        elif other.a==0 and self.a!=0:
-            return False
 
-        if other.b == 0 and self.b == 0:
-            pass
-        elif other.b == 0 and self.b != 0:
-            return False
-
-        if other.c == 0 and self.c == 0:
-            pass
-        elif other.c == 0 and self.c != 0:
-            return False
+        if self.a==other.a or self.b==other.b or self.c==other.c:
+            if self.a==other.a and self.b==other.b and self.c==other.c:
+                return True
+            else:
+                return False
 
         if (self.a/other.a)==(self.b/other.b)==(self.c/other.c):
             return True
@@ -88,24 +80,15 @@ class equation_type2:
             self.slope=math.inf
             self.y_intercept=math.inf
 
-
     def __eq__(self, other):
-        if other.a==0 and self.a==0:
-            pass
-        elif other.a==0 and self.a!=0:
-            return False
 
-        if other.b == 0 and self.b == 0:
-            pass
-        elif other.b == 0 and self.b != 0:
-            return False
+        if self.a == other.a or self.b == other.b or self.c == other.c:
+            if self.a == other.a and self.b == other.b and self.c == other.c:
+                return True
+            else:
+                return False
 
-        if other.c == 0 and self.c == 0:
-            pass
-        elif other.c == 0 and self.c != 0:
-            return False
-
-        if (self.a/other.a)==(self.b/other.b)==(self.c/other.c):
+        if (self.a / other.a) == (self.b / other.b) == (self.c / other.c):
             return True
         else:
             return False
@@ -159,26 +142,17 @@ class equation_type3:
             self.slope=math.inf
 
     def __eq__(self, other):
-        if other.a==0 and self.a==0:
-            pass
-        elif other.a==0 and self.a!=0:
-            return False
 
-        if other.b == 0 and self.b == 0:
-            pass
-        elif other.b == 0 and self.b != 0:
-            return False
+        if self.a == other.a or self.b == other.b or self.c == other.c:
+            if self.a == other.a and self.b == other.b and self.c == other.c:
+                return True
+            else:
+                return False
 
-        if other.c == 0 and self.c == 0:
-            pass
-        elif other.c == 0 and self.c != 0:
-            return False
-
-        if (self.a/other.a)==(self.b/other.b)==(self.c/other.c):
+        if (self.a / other.a) == (self.b / other.b) == (self.c / other.c):
             return True
         else:
             return False
-
 
 
     def __str__(self):
@@ -303,22 +277,14 @@ class equation_type4:
             self.y_intercept = math.inf
 
     def __eq__(self, other):
-        if other.a==0 and self.a==0:
-            pass
-        elif other.a==0 and self.a!=0:
-            return False
 
-        if other.b == 0 and self.b == 0:
-            pass
-        elif other.b == 0 and self.b != 0:
-            return False
+        if self.a == other.a or self.b == other.b or self.c == other.c:
+            if self.a == other.a and self.b == other.b and self.c == other.c:
+                return True
+            else:
+                return False
 
-        if other.c == 0 and self.c == 0:
-            pass
-        elif other.c == 0 and self.c != 0:
-            return False
-
-        if (self.a/other.a)==(self.b/other.b)==(self.c/other.c):
+        if (self.a / other.a) == (self.b / other.b) == (self.c / other.c):
             return True
         else:
             return False
@@ -370,24 +336,15 @@ class equation_type5:
         else:
             self.y_intercept = math.inf
 
-
     def __eq__(self, other):
-        if other.a==0 and self.a==0:
-            pass
-        elif other.a==0 and self.a!=0:
-            return False
 
-        if other.b == 0 and self.b == 0:
-            pass
-        elif other.b == 0 and self.b != 0:
-            return False
+        if self.a == other.a or self.b == other.b or self.c == other.c:
+            if self.a == other.a and self.b == other.b and self.c == other.c:
+                return True
+            else:
+                return False
 
-        if other.c == 0 and self.c == 0:
-            pass
-        elif other.c == 0 and self.c != 0:
-            return False
-
-        if (self.a/other.a)==(self.b/other.b)==(self.c/other.c):
+        if (self.a / other.a) == (self.b / other.b) == (self.c / other.c):
             return True
         else:
             return False
@@ -469,13 +426,21 @@ class Triangle:
 # t1=Triangle(p1,p2,p3)
 # print(t1.area())
 
-l1=equation_type5(point(0,-1),point(1,0))
+# l1=equation_type5(point(0,-1),point(1,0))
+# print(l1)
+# l2=equation_type4(point(1,0),1)
+# print(l2)
+# print(l1==l2)
+l1=equation_type4(point(1,1),1)
+l2=equation_type5(point(3,3),point(4,4))
 print(l1)
-l2=equation_type4(point(1,0),1)
 print(l2)
 print(l1==l2)
+# Success
+'''
+Able to calculate section , angle between lines,
+equation by two point , slope and point , intercept form , general form , slope and intercept form
 
-# BUGS
 '''
-Line is unable to evaluate if two lines are equal due to 0/0 test
-'''
+
+
